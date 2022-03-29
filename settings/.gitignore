@@ -1,0 +1,87 @@
+#Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+/docroot/core
+/docroot/modules/contrib/
+/docroot/themes/contrib/
+/docroot/profiles/contrib/
+/docroot/libraries/
+/docroot/INSTALL.txt
+/docroot/README.md
+
+
+# Ignore system-generated files
+/config/sync/.htaccess
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+/vendor/
+/drush/contrib/
+
+# Ignore temporary audio files
+/docroot/audio_input/
+
+# Ignore submodules
+
+/vendor/**/.git
+/docroot/libraries/**/.git
+/docroot/modules/**/.git
+
+# Ignore configuration files that may contain sensitive information.
+# Settings.php files will need to be created locally for Islandora builds
+# Otherwise, comment that line and keep sensitive passwords in settings.local.php
+
+/docroot/sites/*/settings.local.php
+/docroot/sites/*/settings.php
+/docroot/sites/*/settings-server.php.bak
+
+#Ignore Drupal core, examples and cruft
+
+/docroot/autoload.php
+/docroot/example.gitignore
+/docroot/index.php
+/docroot/modules/README.txt
+/docroot/profiles/README.txt
+/docroot/sites/README.txt
+/docroot/sites/default/default.services.yml
+/docroot/sites/default/default.settings.php
+/docroot/sites/development.services.yml
+/docroot/update.php
+/docroot/sites/default/default.services.yml
+/docroot/sites/example.settings.local.php
+/docroot/sites/example.sites.php
+/docroot/themes/README.txt
+/docroot/docroot.config
+
+# Ignore paths that contain user-generated content.
+/docroot/sites/*/files
+/docroot/sites/*/private
+/private
+/acquia-files
+
+# Ignore SimpleTest multi-site environment.
+/docroot/sites/simpletest
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore IDE Configuration Files
+/.idea/
+/docroot/.idea
+/.nova
+
+# Ignore backup files and temp folders
+/backup
+/backup-user
+/transfer
+/tmp
+
+# Environment and GIT configuration files
+/.env
+.editorconfig
+.gitattributes
+
+/docroot/sites/default/development.services.yml

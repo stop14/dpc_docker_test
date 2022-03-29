@@ -1,0 +1,34 @@
+.DS_Store
+.nova
+.idea
+!.gitkeep
+/.env
+
+# Ignore logfiles
+/logs/**
+/logs/apache2/**
+
+# Ignore main codebase
+/codebase
+/codebase/**
+
+# Ignore files folder
+/files/**
+
+# Ignore local backup and data folder
+/data/**
+/backup/**
+
+# Ignore local config files
+/config/ssl/**
+/config/letsencrypt/**
+/config/vhosts/**
+
+# Make an exception for Apache config, which allows
+# you to point the default web directory to the
+# value set in .env
+!/config/vhosts/default.conf
+
+#legacy
+/certs/**
+/ssl/**
