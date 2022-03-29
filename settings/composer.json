@@ -1,0 +1,83 @@
+{
+    "name": "uva/uva-dpc-drupal-base",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "drupal/address": "^1.9",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/console": "^1.9",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
+        "drupal/ctools": "^3.2",
+        "drupal/devel": "^4.1",
+        "drupal/devel_entity_updates": "^3.0",
+        "drupal/entity": "^1.2",
+        "drupal/entity_reference_revisions": "^1.9",
+        "drupal/field_group": "^3.2",
+        "drupal/file_entity": "^2.0@beta",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/libraries": "^3.0@beta",
+        "drupal/paragraphs": "^1.11",
+        "drupal/pathauto": "^1.6",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/redis": "^1.5",
+        "drupal/svg_image": "^1.16",
+        "drupal/token": "^1.10",
+        "drupal/twig_tweak": "^3.1",
+        "drush/drush": "^11.0"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^9"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            }
+        },
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/libraries/{$name}": ["type:drupal-library"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "drupal-core-project-message": {
+            "include-keys": ["homepage", "support"]
+        },
+        "patches": {
+        }
+    }
+}
