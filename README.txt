@@ -23,9 +23,8 @@ NOTE: REBUILDING THE DOCKER CONTAINER
 
 NOTE: SSL CERTIFICATES
 - You may need to update self-signed certificates inside the container.
-- The ssl folder is volume mapped. Inside the container it can be found at /etc/ssl
-- Outside the container it can be found at ./ssl
+- The ssl certs folder is volume mapped. Inside the container it can be found at /etc/ssl/certs
+- Outside the container it can be found at ./config/certs
 - To update certs:
-   - create /etc/ssl/certs directory, if it doesn't exist
    - run update-ca-certificates from inside the container
    - if that doesn't work, try apt-get install ca-certificates first

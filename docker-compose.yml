@@ -19,7 +19,7 @@ services:
       - ${LOG_DIR-./logs/apache2}:/var/log/apache2
       - ${LOCAL_STORAGE_DIR}/codebase:/var/www/drupal:delegated
       - ${LOCAL_STORAGE_DIR}/files:/var/www/drupal/docroot/sites/default/files
-      - ./config/ssl:/etc/ssl
+      - ./config/certs:/etc/ssl/certs
       - ./config/letsencrypt:/etc/letsencrypt
     environment:
       APACHE_DOCUMENT_ROOT: ${APACHE_DOCUMENT_ROOT-/var/www/drupal/docroot}
